@@ -1,0 +1,10 @@
+- hosts: unjoined
+  gather_facts: no
+
+#The following task will copy a file from the control machine to the Windows machine from the unjoined group in the inventory file  
+  
+  tasks:
+  - name: Copy a single file
+    win_copy:
+       src: /home/administrator/windows/test.ps1
+       dest: c:\test.ps1

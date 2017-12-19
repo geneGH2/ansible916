@@ -1,0 +1,14 @@
+- hosts: windows
+  gather_facts: no
+  tasks:
+  - win_chocolatey:
+      name: googlechrome
+      state: absent
+
+  - win_chocolatey:
+      name: winrar
+      state: present
+
+  - win_chocolatey:
+      name: notepadplusplus
+      state: present
